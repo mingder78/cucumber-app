@@ -5,5 +5,5 @@ Given(/^I am a sailor$/) do
 end
 
 Then(/^I want to be greeted "(.*?)"$/) do |greeting|
-  assert_equal @user.greeting, greeting
+  @user.greeting.should == greeting
 end
