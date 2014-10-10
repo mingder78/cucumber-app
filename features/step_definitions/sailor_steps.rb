@@ -5,5 +5,5 @@ Given(/^I am a sailor$/) do
 end
 
 Then(/^I want to be greeted "(.*?)"$/) do |greeting|
-  @user.greeting.should == greeting
+  expect {@user.greeting.should == greeting }
 end
