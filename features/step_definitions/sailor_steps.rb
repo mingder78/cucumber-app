@@ -1,7 +1,9 @@
+require "user"
+
 Given(/^I am a sailor$/) do
-    pending # express the regexp above with the code you wish you had
+  @user = User.new type: :sailor
 end
 
-Then(/^I want to be greeted "(.*?)"$/) do |arg1|
-    pending # express the regexp above with the code you wish you had
+Then(/^I want to be greeted "(.*?)"$/) do |greeting|
+  assert_equal @user.greeting, greeting
 end
